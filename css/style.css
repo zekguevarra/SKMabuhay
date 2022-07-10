@@ -1,0 +1,113 @@
+/* navbar */
+.navbar-toggler {
+    border: 0 !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #f0b63a;
+    display: block;
+    transition: all 0.2s;
+}
+.middle-bar{
+    margin: 5px auto;
+}
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #ffffff;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+html,body{
+    height: 100%;
+}
+.navbar{
+    font-family: 'Montserrat', sans-serif;
+}
+.logo{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* contactus */
+.mapgoogle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mapbox{
+    background-color: #f0b63a;
+    border-radius: 5%;
+    margin: 30px;
+}
+@media (max-width: 800px) {
+    .mapgoogle{
+        display: none;
+    }
+    }
+.contactus{
+    background-image: url(/worldmap.png);
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: lighten;
+    height: 80%;
+}
+.contactdetails{
+    font-family: 'Montserrat', sans-serif;
+}
+/* header section */
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  /* event section */
+  .eventdet{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.2rem;
+  }
+  a{
+    text-decoration: none !important;
+  }
+  .card-text{
+    color: #ffffff;
+  }
+  
