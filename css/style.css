@@ -76,8 +76,8 @@ html,body{
         display: none;
     }
     }
-.contactus{
-    background-image: url(/worldmap.png);
+.contactus{ 
+    background-image: url(../worldmap.png);
     background-color: rgba(0, 0, 0, .5);
     background-size: cover;
     background-repeat: no-repeat;
