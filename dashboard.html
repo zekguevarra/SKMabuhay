@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- datatables     -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="/script/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <!-- other links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <!-- offcanvas button -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+            </button>
+          <a class="navbar-brand fw-bold me-auto" href="#">ADMIN PANEL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <form class="d-flex" role="search">
+                <div class="input-group my-1">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search-heart text-white"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle text-white "></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- offcanvas -->
+      
+      <div class="offcanvas offcanvas-start sidebar bg-dark text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <!-- <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div> -->
+        <div class="offcanvas-body p-0">
+          <nav class="navbar-dark">
+            <ul class="navbar-nav">
+                <li>
+                    <div class="text-muted text-uppercase small fw-bold px-3">
+                        Core
+                    </div>
+                </li>
+                <li>
+                    <a href="/dashboard.html" class="nav-link px-3 active">
+                        <span><i class="bi bi-speedometer2 me-2"></i></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="my-4">
+                    <hr class="dropdown"/>
+                </li>
+                <li>
+                    <div class="text-muted text-uppercase small fw-bold px-3">
+                        Interface
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="me-2 "><i class="bi bi-grid"></i></span>
+                        <span>Layout</span>
+                        <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+                      </a>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body bg-dark text-muted border-0">
+                          <ul class="navbar-nav ps-3">
+                            <li>
+                                <a href="/layout/user.html" class="nav-link">
+                                    <span><i class="bi bi-people-fill me-2"></i></span>
+                                    <span>User</span>
+                                </a>
+                            </li>
+                            <li>
+                              <a href="/layout/blog.html" class="nav-link">
+                                  <span><i class="bi bi-pencil-square me-2"></i></span>
+                                  <span>Blog</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/layout/documentrequest.html" class="nav-link">
+                                <span><i class="bi bi-info-circle me-2"></i></span>
+                                <span>Documents Request</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/layout/reports.html" class="nav-link">
+                                <span><i class="bi bi-exclamation-triangle  me-2"></i></span>
+                                <span>Concern / Reports</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    <!-- main section -->
+    <!-- admin section -->
+    <main class="mt-5 pt-3">
+      <div class="container">
+          <div class="row mt-3">
+              <div class="col-md-4 col-xl-3">
+                  <div class="card bg-c-blue order-card">
+                      <div class="card-block">
+                          <h6 class="m-b-20">Total User</h6>
+                          <h2 class="text-right"><i class="bi bi-people-fill me-2"></i><span>486</span></h2>
+                          <p class="m-b-0">New Users: <span class="f-right">89</span></p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-md-4 col-xl-3">
+                  <div class="card bg-c-green order-card">
+                      <div class="card-block">
+                          <h6 class="m-b-20">Blog Post</h6>
+                          <h2 class="text-right"><i class="bi bi-pencil-square me-2"></i><span>65</span></h2>
+                          <p class="m-b-0">Blog post this month: <span class="f-right">7</span></p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-md-4 col-xl-3">
+                  <div class="card bg-c-yellow order-card">
+                      <div class="card-block">
+                          <h6 class="m-b-20">Pending Request</h6>
+                          <h2 class="text-right"><i class="bi bi-info-circle me-2"></i><span>8</span></h2>
+                          <p class="m-b-0">Today Request:<span class="f-right">1</span></p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-md-4 col-xl-3">
+                  <div class="card bg-c-pink order-card">
+                      <div class="card-block">
+                          <h6 class="m-b-20">Concern / Report</h6>
+                          <h2 class="text-right"><i class="bi bi-exclamation-triangle me-2"></i><span>3</span></h2>
+                          <p class="m-b-0">Today Report:<span class="f-right">3</span></p>
+                      </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="titletable my-4 text-center">Document Request</div>
+        <table id="example" class="display">
+          <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Extn.</th>
+                <th>E-mail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Tiger</td>
+                <td>Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>5421</td>
+                <td>t.nixon@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Garrett</td>
+                <td>Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011-07-25</td>
+                <td>$170,750</td>
+                <td>8422</td>
+                <td>g.winters@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Ashton</td>
+                <td>Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009-01-12</td>
+                <td>$86,000</td>
+                <td>1562</td>
+                <td>a.cox@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Cedric</td>
+                <td>Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012-03-29</td>
+                <td>$433,060</td>
+                <td>6224</td>
+                <td>c.kelly@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Airi</td>
+                <td>Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008-11-28</td>
+                <td>$162,700</td>
+                <td>5407</td>
+                <td>a.satou@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Brielle</td>
+                <td>Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                <td>61</td>
+                <td>2012-12-02</td>
+                <td>$372,000</td>
+                <td>4804</td>
+                <td>b.williamson@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Herrod</td>
+                <td>Chandler</td>
+                <td>Sales Assistant</td>
+                <td>San Francisco</td>
+                <td>59</td>
+                <td>2012-08-06</td>
+                <td>$137,500</td>
+                <td>9608</td>
+                <td>h.chandler@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Rhona</td>
+                <td>Davidson</td>
+                <td>Integration Specialist</td>
+                <td>Tokyo</td>
+                <td>55</td>
+                <td>2010-10-14</td>
+                <td>$327,900</td>
+                <td>6200</td>
+                <td>r.davidson@datatables.net</td>
+            </tr>
+            <tr>
+                <td>Colleen</td>
+                <td>Hurst</td>
+                <td>Javascript Developer</td>
+                <td>San Francisco</td>
+                <td>39</td>
+                <td>2009-09-15</td>
+                <td>$205,500</td>
+                <td>2360</td>
+                <td>c.hurst@datatables.net</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+      <div class="col">
+      <div class="titletable my-4 text-center">Concern / Reports</div>
+      <table id="example1" class="display">
+        <thead>
+          <tr>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+              <th>Extn.</th>
+              <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>Tiger</td>
+              <td>Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>61</td>
+              <td>2011-04-25</td>
+              <td>$320,800</td>
+              <td>5421</td>
+              <td>t.nixon@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Garrett</td>
+              <td>Winters</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>63</td>
+              <td>2011-07-25</td>
+              <td>$170,750</td>
+              <td>8422</td>
+              <td>g.winters@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Ashton</td>
+              <td>Cox</td>
+              <td>Junior Technical Author</td>
+              <td>San Francisco</td>
+              <td>66</td>
+              <td>2009-01-12</td>
+              <td>$86,000</td>
+              <td>1562</td>
+              <td>a.cox@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Cedric</td>
+              <td>Kelly</td>
+              <td>Senior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+              <td>2012-03-29</td>
+              <td>$433,060</td>
+              <td>6224</td>
+              <td>c.kelly@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Airi</td>
+              <td>Satou</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>33</td>
+              <td>2008-11-28</td>
+              <td>$162,700</td>
+              <td>5407</td>
+              <td>a.satou@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Brielle</td>
+              <td>Williamson</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td>61</td>
+              <td>2012-12-02</td>
+              <td>$372,000</td>
+              <td>4804</td>
+              <td>b.williamson@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Herrod</td>
+              <td>Chandler</td>
+              <td>Sales Assistant</td>
+              <td>San Francisco</td>
+              <td>59</td>
+              <td>2012-08-06</td>
+              <td>$137,500</td>
+              <td>9608</td>
+              <td>h.chandler@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Rhona</td>
+              <td>Davidson</td>
+              <td>Integration Specialist</td>
+              <td>Tokyo</td>
+              <td>55</td>
+              <td>2010-10-14</td>
+              <td>$327,900</td>
+              <td>6200</td>
+              <td>r.davidson@datatables.net</td>
+          </tr>
+          <tr>
+              <td>Colleen</td>
+              <td>Hurst</td>
+              <td>Javascript Developer</td>
+              <td>San Francisco</td>
+              <td>39</td>
+              <td>2009-09-15</td>
+              <td>$205,500</td>
+              <td>2360</td>
+              <td>c.hurst@datatables.net</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </main>
+</body>
+
+<!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+</html>
+
+<style>
+    .sidebar{
+        width: 270px !important;
+    }
+    .sidebar-link{
+        display: flex;
+        align-items: center;
+    }
+    .sidebar-link .right-icon{
+        display: inline-flex;
+    }
+    .sidebar-link[aria-expanded="true"] .right-icon{
+        transform: rotate(180deg);
+    }
+@media(min-width:992px){
+    body{
+        overflow: auto !important;
+    }
+    .sidebar{
+        transform: none !important;
+        visibility: visible !important;
+        top:56px !important;
+        height: calc(100%-56px)!important;
+    }
+    main{
+        margin-left: 270px;
+    }
+}
+/* card section */
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+/* datatables */
+
+div.dataTables_wrapper {
+        width: 500px;
+        margin: 0 auto;
+        font-size: 80%;
+    }
+@media(max-width:501px){
+  div.dataTables_wrapper {
+        width: 95vw;
+        margin: 0 auto;
+        font-size: 80%;
+    }
+}
+.titletable{
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 1.5rem;
+}
+
+</style>

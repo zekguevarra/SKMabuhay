@@ -16,3 +16,18 @@ $(document).ready(function(){
         }
     );
 });
+
+//datatables
+$(document).ready(function () {
+    $('#example').DataTable({
+        scrollY: 300,
+        scrollX: true,
+    });
+});
+$(document).ready(function () {
+    $('#example1').DataTable({
+        scrollY: 300,
+        scrollX: true,
+    });
+});
+
