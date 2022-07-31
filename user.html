@@ -92,25 +92,25 @@
                         <div class="card card-body bg-dark text-muted border-0">
                           <ul class="navbar-nav ps-3">
                             <li>
-                                <a href="/layout/user.html" class="nav-link">
+                                <a href="user.html" class="nav-link">
                                     <span><i class="bi bi-people-fill me-2"></i></span>
                                     <span>User</span>
                                 </a>
                             </li>
                             <li>
-                              <a href="/layout/blog.html" class="nav-link">
+                              <a href="blog.html" class="nav-link">
                                   <span><i class="bi bi-pencil-square me-2"></i></span>
                                   <span>Blog</span>
                               </a>
                             </li>
                             <li>
-                              <a href="/layout/documentrequest.html" class="nav-link">
+                              <a href="documentrequest.html" class="nav-link">
                                 <span><i class="bi bi-info-circle me-2"></i></span>
                                 <span>Documents Request</span>
                               </a>
                             </li>
                             <li>
-                              <a href="/layout/reports.html" class="nav-link">
+                              <a href="reports.html" class="nav-link">
                                 <span><i class="bi bi-exclamation-triangle  me-2"></i></span>
                                 <span>Concern / Reports</span>
                               </a>
@@ -126,46 +126,8 @@
     <!-- main section -->
     <!-- admin section -->
     <main class="mt-5 pt-3">
-        <button type="button" class="btn btn-primary" style="margin-left: 2.5vw; margin-top: 56px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            New Post
-            </button>
         
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Blog Post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="<?php echo site_url('CrudController/create')?>">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Title</label>
-                            <input type="text" class="form-control" name="lastName" aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Description:</label>
-                            <textarea class="form-control" id="message-text" rows="5"></textarea>
-                          </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Date:</label>
-                            <input type="date" class="form-control"  name="birthdate" aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Cover Photo:</label>
-                            <input type="file" class="form-control" name="contactNo" aria-describedby="emailHelp">
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-                </div>
-            </div>
-            </div>
-          <div class="titletable my-4 text-center">Blog Post</div>
+          <div class="titletable my-4 text-center">Users</div>
         <table id="example" class="display">
           <thead>
             <tr>
