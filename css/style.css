@@ -109,4 +109,70 @@ html,body{
   .card-text{
     color: #ffffff;
   }
-  
+  /* partner section */
+  /* marque tutorial: https://www.youtube.com/watch?v=sVZX0XvEBhk */
+  :root{
+    --marquee-width:100vw;
+    --marquee-height:20vh;
+    /* --marquee-elements:9; */
+    --marquee-elements-displayed:4;
+    --marquee-elements-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
+    --marquee-animation-duration:calc(var(--marquee-elements)*3s);
+  }
+  .marquee{
+    color: #ffffff;
+    width: var(--marquee-width);
+    height:var(--marquee-height);
+    overflow: hidden;
+    position: relative;
+    margin:0 auto;
+  }
+  .marquee::before, .marquee::after{
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  /* .marquee::before{
+    left: 0;
+    background: linear-gradient(to right,#111 0%, transparent 100%);
+  }
+  .marquee::after{
+    right: 0;
+    background: linear-gradient(to left,#111 0%, transparent 100%);
+  } */
+  .marquee-content{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+  .marquee-content:hover{
+    animation-play-state: paused;
+  }
+  @keyframes scrolling{
+    0%{
+        transform: translateX(80vw);
+    }
+    100%{
+        transform: translateX(calc(-1*var(--marquee-elements-width)*var(--marquee-elements)));
+    }
+  }
+  .marquee-content li{
+    width: var(--marquee-elements-width);
+    flex-shrink: 0;
+    font-size: calc(var(--marquee-height)*2/3);
+    white-space: nowrap;
+  }
+  @media(max-width:600px){
+    :root{
+        --marquee-width:100vw;
+        --marquee-height:15vh;
+        --marquee-elements-displayed:3;
+    }
+    .marquee::before, .marquee::after{
+        width:5rem;
+      }
+  }
