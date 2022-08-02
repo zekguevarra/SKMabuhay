@@ -1,3 +1,41 @@
+/* animation logo intro */
+.intro{
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #212529;
+  transition: 1s;
+}
+.logo-header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #ffffff;
+}
+.logo{
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  font-size: 3rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.logo.active{
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+.logo.fade{
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
 /* navbar */
 .navbar-toggler {
     border: 0 !important;
@@ -57,7 +95,7 @@ html,body{
 .navbar{
     font-family: 'Montserrat', sans-serif;
 }
-.logo{
+.titlelogo{
     font-family: 'Roboto Condensed', sans-serif;
 }
 /* contactus */
